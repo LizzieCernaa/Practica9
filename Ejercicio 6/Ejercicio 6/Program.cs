@@ -10,75 +10,41 @@ namespace Ejercicio_6
     {
         static void Main(string[] args)
         {
-            string opci;
-            double num1;
-            double num2;
-            double peso;
-            double altura;
+            String opcion = String.Empty;
 
-            Console.WriteLine("Seleccione la obsion que desaea realizar del menu:");
-            imprimirmenu();
-
-            void imprimirmenu()
+            while (!opcion.Equals("d"))
             {
+                Console.Clear();
+                Console.WriteLine(" -----MENU----- ");
                 Console.WriteLine("a. Dividir ");
                 Console.WriteLine("b. Obtener Cubo ");
                 Console.WriteLine("c. Calculo de IMC ");
                 Console.WriteLine("d. Salir ");
-            }
-             void ObtenerNombreSistema(string opcion)
-            {
-                string resultado = string.Empty;
+                Console.WriteLine(" -----Selecicone una opcion----- ");
+                opcion = Console.ReadLine();    
 
-                switch (opcion)
+
+                if (opcion.Equals("a"))
                 {
-                    case "a":
-                        resultado = "Dividir";
-                        break;
-                    case "b":
-                        resultado = "Obtener Cubo";
-                        break;
-                    case "c":
-                        resultado = "Calculo de IMC";
-                        break;
-                    case "d":
-                        resultado = "Salir";
-                        break;
-                    default:
-                        break;
+                    Console.WriteLine("Dividir");
                 }
-             }
-
-            void divirdir() 
-            {
-                Console.WriteLine("Ingresa el primer numero");
-                num1 = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Ingresa el segundo numero");
-                num2 = int.Parse(Console.ReadLine());
-
-                double resultado = num1 / num2;
-                Console.WriteLine($"El resultado de la Divicion es {resultado}");
-
-            }
-
-            void obtenerCubo() 
-            {
-                Console.WriteLine("Ingresa un numero");
-                num1 = int.Parse(Console.ReadLine());
-
-                double formula = Math.Pow(num1, 2);
-                Console.WriteLine($"El resultado para obtener un cubo es {formula}");
-
+                else if (opcion.Equals("b"))
+                {
+                    Console.WriteLine("Obtener Cubo");
+                }
+                else if (opcion.Equals("c"))
+                {
+                    Console.WriteLine("Calculo de IMC");
+                }
+                else if (opcion.Equals("d"))
+                {
+                    Console.WriteLine("Salir");
+                }
 
             }
 
-            void IMC() 
-            {
-
-            }
-
-
+            Console.Clear();
+            Console.WriteLine("Feliz dia :) ");
             Console.ReadKey();
         }
     }
